@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eff6ff, #f8fafc);
+    color: #1e293b;
+}
+/*--------------------------------*/
+/*--|estilo_aeropuerto_nacional|--*/
+/*--------------------------------*/
+.contenedor_aeropuerto {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: #ffffff;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.10);
+}
+.encabezado_aeropuerto {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.icono_aeropuerto {
+    margin-bottom: 10px;
+    color: #2563eb;
+    font-size: 38px;
+}
+.encabezado_aeropuerto h1 {
+    margin-bottom: 8px;
+    color: #172554;
+    font-size: 34px;
+}
+.encabezado_aeropuerto p {
+    color: #64748b;
+    font-size: 15px;
+}
+/*------------------------------*/
+/*--|estilo_formulario_vuelos|--*/
+/*------------------------------*/
+.panel_formulario {
+    margin-bottom: 25px;
+    padding: 22px;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    background: #f8fbff;
+}
+.panel_formulario h2 {
+    margin-bottom: 18px;
+    color: #1e3a8a;
+    font-size: 20px;
+}
+.panel_formulario h2 i {
+    margin-right: 6px;
+}
+#formulario_vuelo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+.campo_vuelo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.campo_vuelo label {
+    color: #334155;
+    font-size: 13px;
+    font-weight: bold;
+}
+.campo_vuelo input, .campo_vuelo select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    background: #ffffff;
+    color: #1e293b;
+}
+.campo_vuelo input:focus, .campo_vuelo select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+.boton_registrar {
+    align-self: end;
+    padding: 11px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+}
+.boton_registrar:hover {
+    background: #1d4ed8;
+}
+/*---------------------------*/
+/*--|estilo_resumen_vuelos|--*/
+/*---------------------------*/
+.resumen_vuelos {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #1e3a8a;
+}
+.resumen_vuelos div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.resumen_vuelos strong {
+    font-size: 18px;
+}
+.boton_limpiar {
+    margin-left: auto;
+    padding: 9px 12px;
+    border: none;
+    border-radius: 7px;
+    background: #ef4444;
+    color: #ffffff;
+    cursor: pointer;
+}
+.boton_limpiar:hover {
+    background: #dc2626;
+}
+/*-------------------------*/
+/*--|estilo_tabla_vuelos|--*/
+/*-------------------------*/
+.contenedor_tabla {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+.tabla_vuelos {
+    width: 100%;
+    border-collapse: collapse;
+}
+.tabla_vuelos th {
+    padding: 14px;
+    background: #172554;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: left;
+}
+.tabla_vuelos td {
+    padding: 14px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+    font-size: 14px;
+}
+.tabla_vuelos tr:last-child td {
+    border-bottom: none;
+}
+.tabla_vuelos tbody tr:hover {
+    background: #f8fafc;
+}
+.estado_vuelo {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 11px;
+    font-weight: bold;
+}
+.estado_cancelado {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+.boton_eliminar {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 7px;
+    background: #fee2e2;
+    color: #dc2626;
+    cursor: pointer;
+}
+.boton_eliminar:hover {
+    background: #fecaca;
+}
+.mensaje_vacio {
+    padding: 35px;
+    text-align: center;
+    color: #94a3b8;
+}
+.mensaje_vacio i {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+.mensaje_vacio p {
+    font-size: 14px;
+}

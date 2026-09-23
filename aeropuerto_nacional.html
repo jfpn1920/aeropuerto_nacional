@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aeropuerto nacional</title>
+    <link rel="stylesheet" href="aeropuerto_nacional.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="aeropuerto_nacional.js" defer></script>
+</head>
+<body>
+    <!---------------------------------------->
+    <!--|estructuracion_aeropuerto_nacional|-->
+    <!---------------------------------------->
+    <main class="contenedor_aeropuerto">
+        <header class="encabezado_aeropuerto">
+            <div class="icono_aeropuerto">
+                <i class="fa-solid fa-plane-departure"></i>
+            </div>
+            <h1>Aeropuerto Nacional</h1>
+            <p>Consulta y administra los vuelos nacionales.</p>
+        </header>
+        <!----------------------->
+        <!--|formulario_vuelos|-->
+        <!----------------------->
+        <section class="panel_formulario">
+            <h2><i class="fa-solid fa-plus"></i>Registrar vuelo</h2>
+            <form id="formulario_vuelo">
+                <div class="campo_vuelo">
+                    <label for="numero_vuelo">Número de vuelo</label>
+                    <input type="text" id="numero_vuelo" placeholder="Ej: AV101" required>
+                </div>
+                <div class="campo_vuelo">
+                    <label for="destino_vuelo">Destino</label>
+                    <input type="text" id="destino_vuelo" placeholder="Ej: Bogotá" required>
+                </div>
+                <div class="campo_vuelo">
+                    <label for="horario_vuelo">Horario</label>
+                    <input type="time" id="horario_vuelo" required>
+                </div>
+                <div class="campo_vuelo">
+                    <label for="estado_vuelo">Estado</label>
+                    <select id="estado_vuelo" required>
+                        <option value="">Seleccionar</option>
+                        <option value="Programado">Programado</option>
+                        <option value="Embarcando">Embarcando</option>
+                        <option value="En vuelo">En vuelo</option>
+                        <option value="Cancelado">Cancelado</option>
+                    </select>
+                </div>
+                <button class="boton_registrar" type="submit"><i class="fa-solid fa-plane"></i>Registrar vuelo</button>
+            </form>
+        </section>
+        <!-------------------->
+        <!--|resumen_vuelos|-->
+        <!-------------------->
+        <section class="resumen_vuelos">
+            <div>
+                <i class="fa-solid fa-list"></i>
+                <span>Vuelos registrados:</span>
+                <strong id="cantidad_vuelos">0</strong>
+            </div>
+            <button id="limpiar_vuelos" class="boton_limpiar" type="button"><i class="fa-solid fa-trash"></i>Limpiar vuelos</button>
+        </section>
+        <!------------------>
+        <!--|tabla_vuelos|-->
+        <!------------------>
+        <section class="contenedor_tabla">
+            <table class="tabla_vuelos">
+                <thead>
+                    <tr>
+                        <th>Vuelo</th>
+                        <th>Destino</th>
+                        <th>Horario</th>
+                        <th>Estado</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="lista_vuelos"></tbody>
+            </table>
+            <div id="mensaje_vacio" class="mensaje_vacio">
+                <i class="fa-solid fa-plane-slash"></i>
+                <p>No hay vuelos registrados.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
